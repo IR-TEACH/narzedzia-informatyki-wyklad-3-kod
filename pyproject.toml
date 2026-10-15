@@ -1,0 +1,14 @@
+[project]
+name = "minilib"
+version = "0.1.0"
+description = "Mała biblioteka: katalog książek, czytelnicy, przypomnienia o zwrocie."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+minilib = "minilib.catalog:main"
+
+[build-system]
+requires = ["uv_build>=0.11.19,<0.12.0"]
+build-backend = "uv_build"

@@ -5,6 +5,6 @@ Mała biblioteka: katalog książek, czytelnicy, przypomnienia o zwrocie.
 Uruchomienie:
 
 ```
-uv run main.py      # katalog książek
-uv run notify.py    # przypomnienie SMS
+uv run minilib                   # katalog książek
+uv run python -m minilib.notify  # przypomnienie SMS
 ```

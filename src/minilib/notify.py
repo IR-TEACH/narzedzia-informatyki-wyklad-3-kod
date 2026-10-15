@@ -1,7 +1,7 @@
 """Przypomnienia SMS o terminie zwrotu książki."""
 import os
 
-from member import Member
+from minilib.member import Member
 
 SMS_API_KEY = os.environ.get("MINILIB_SMS_KEY", "")
 SMS_SENDER = "MiniLib"
