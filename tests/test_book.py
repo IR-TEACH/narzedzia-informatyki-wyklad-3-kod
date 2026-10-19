@@ -1,3 +1,5 @@
+import pytest
+
 from minilib.book import Book
 
 
@@ -12,3 +14,8 @@ def test_from_dict_reads_all_fields():
 
 def test_copies_default_to_one():
     assert Book("978-0-13-235088-4", "Clean Code", "Martin, Robert").copies == 1
+
+
+def test_wrong_check_digit_raises():
+    with pytest.raises(ValueError):
+        Book("978-0-13-235088-5", "Clean Code", "Martin, Robert")
