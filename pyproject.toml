@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "Mała biblioteka: katalog książek, czytelnicy, przypomnienia o zwrocie."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "rich>=15.0.0",
+]
 
 [project.scripts]
 minilib = "minilib.catalog:main"
