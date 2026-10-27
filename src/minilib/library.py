@@ -19,7 +19,8 @@ class Library:
             return cls([Book.from_dict(item) for item in json.load(f)])
 
     def find_by_isbn(self, isbn: str) -> Book | None:
+        wanted = isbn.replace("-", "")
         for book in self.books:
-            if book.isbn == isbn:
+            if book.isbn.replace("-", "") == wanted:
                 return book
         return None

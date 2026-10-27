@@ -16,3 +16,10 @@ def test_from_file_loads_whole_catalog():
     library = Library.from_file()
 
     assert len(library.books) == 6
+
+
+def test_find_by_isbn_without_hyphens(library):
+    book = library.find_by_isbn("9780132350884")
+
+    assert book is not None
+    assert book.title == "Clean Code"
